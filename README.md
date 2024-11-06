@@ -29,7 +29,7 @@ Add the following code to your HTML file:
 </head>
 ```
 
-### Method 2: NPM Installation
+### Method 2: NPM Installation - Coming soon 🔜
 
 ```bash
 npm install elern-admission-widget
