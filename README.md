@@ -22,10 +22,10 @@ Add the following code to your HTML file:
 ```html
 <head>
     <!-- Add the CSS file -->
-    <link rel="stylesheet" href="https://widget.elern.io/dist/elernwidget.css">
+    <link rel="stylesheet" href="https://newron-demo.s3.ap-south-1.amazonaws.com/elernwidget/dist/elernwidget.css">
     
     <!-- Add the JavaScript file -->
-    <script async src="https://widget.elern.io/dist/elernwidget.js"></script>
+    <script async src="https://newron-demo.s3.ap-south-1.amazonaws.com/elernwidget/dist/elernwidget.js"></script>
 </head>
 ```
 
@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <title>School Admission Form</title>
     
     <!-- Widget Dependencies -->
-    <link rel="stylesheet" href="https://widget.elern.io/dist/elernwidget.css">
-    <script async src="https://widget.elern.io/dist/elernwidget.js"></script>
+    <link rel="stylesheet" href="https://newron-demo.s3.ap-south-1.amazonaws.com/elernwidget/dist/elernwidget.css">
+    <script async src="https://newron-demo.s3.ap-south-1.amazonaws.com/elernwidget/dist/elernwidget.js"></script>
     
     <style>
         /* Loading Spinner */
