@@ -17,16 +17,14 @@ A lightweight, customizable admission form widget that can be easily integrated 
 
 ### Method 1: Direct Script Include
 
-Add the following code to your HTML file:
+Add the following code to your HTML file inside the head tag:
 
 ```html
-<head>
     <!-- Add the CSS file -->
     <link rel="stylesheet" href="https://newron-demo.s3.ap-south-1.amazonaws.com/elernwidget/dist/elernwidget.css">
     
     <!-- Add the JavaScript file -->
     <script async src="https://newron-demo.s3.ap-south-1.amazonaws.com/elernwidget/dist/elernwidget.js"></script>
-</head>
 ```
 
 ### Method 2: NPM Installation - Coming soon 🔜
@@ -40,7 +38,10 @@ npm install elern-admission-widget
 1. Add a container div where you want the form to appear:
 
 ```html
-<div id="student-application-form"></div>
+<div id="student-application-form" style="display: none"></div>
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
 ```
 
 2. Initialize the widget:
@@ -48,10 +49,18 @@ npm install elern-admission-widget
 ```html
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    ElernWidget.initializeWidget({
-        formId: 'student-application-form',
-        templateId: '16'  // Replace with your template ID
-    });
+    function initializeWidgetWhenReady() {
+          if (window.ElernWidget) {
+            ElernWidget.initializeWidget({
+              formId: "student-application-form",
+              templateId: "27", // Replace with your template ID
+            });
+          } else {
+            setTimeout(initializeWidgetWhenReady, 100);
+          }
+        }
+
+        initializeWidgetWhenReady();
 });
 </script>
 ```
